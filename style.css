@@ -1,0 +1,183 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+game container
+*/
+#game-container {
+    width:256px;
+    height: 240px;
+    image-rendering: pixelated;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.board-wrapper {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+/*
+contains ship storage, letters, and grid
+*/
+.middleScreen-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+container for grid and numbers
+*/
+.gridAndNumbers-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+other containers that make up board
+*/
+#grid-container {
+    flex: 50%;
+    display: grid;
+    grid-template-columns: repeat(10, calc(16px * var(--pixel-scale)));
+    grid-template-rows: repeat(10, calc(16px * var(--pixel-scale)));
+    
+}
+
+
+
+
+
+
+.tile {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(16px * var(--pixel-scale));
+    background-image: url('gfx/battleship-waterTile_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#leftBorderTiles {
+    width: calc(48px * var(--pixel-scale));
+    height: calc(176px * var(--pixel-scale));
+    background-image: url('gfx/battleship-lettersTiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#numberTiles {
+    width: calc(160px * var(--pixel-scale));
+    height: calc(16px * var(--pixel-scale));
+    background-image: url('gfx/battleship-numbersTiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#topTextTiles {
+    width: calc(256px * var(--pixel-scale));
+    height: calc(32px * var(--pixel-scale));
+    background-image: url('gfx/battleship-topTextTiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#rightSideTiles {
+    width: calc(48px * var(--pixel-scale));
+    height: calc(176px * var(--pixel-scale));
+    background-image: url('gfx/battleship-rightSideTiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+#bottomSideTiles {
+    width: calc(256px * var(--pixel-scale));
+    height: calc(32px * var(--pixel-scale));
+    background-image: url('gfx/battleship-bottomTiles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+/* ships 
+Only used for placement*/
+
+#carrier {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(80px * var(--pixel-scale));
+    background-image: url('gfx/carrier.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    position: fixed;
+}
+
+#battleship {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(64px * var(--pixel-scale));
+    background-image: url('gfx/battleship.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    position: relative;
+
+}
+
+#cruiser {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(48px * var(--pixel-scale));
+    background-image: url('gfx/cruiser.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    position: fixed;
+}
+
+#submarine {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(48px * var(--pixel-scale));
+    background-image: url('gfx/submarine.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    position: fixed;
+}
+
+#destroyer {
+    width: calc(16px * var(--pixel-scale));
+    height: calc(32px * var(--pixel-scale));
+    background-image: url('gfx/destroyer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    position: fixed;
+}
